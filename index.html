@@ -278,6 +278,13 @@
             font-weight: 600;
         }
         
+        .office-map { 
+            margin: 15px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
         @media (max-width: 768px) {
             .header-content { flex-direction: column; text-align: center; }
             nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; }
@@ -287,6 +294,7 @@
             .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1.1rem; }
             .dashboard { grid-template-columns: 1fr; }
+            .office-map iframe { height: 300px; }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -322,6 +330,10 @@
                 <div class="office-info">
                     <i class="fas fa-building"></i> 
                     Жойлашув фақат ишхонада олинади!
+                </div>
+                
+                <div class="office-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4879.990025529066!2d71.75738277942109!3d40.48599540620792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb7700344a9cdb%3A0xb3ad02218ee0af7d!2sToshloq%20tumani%20tibbiyot%20birlashmasi!5e0!3m2!1sru!2s!4v1761984918524!5m2!1sru!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 
                 <div class="form-group">
@@ -383,11 +395,11 @@
         const botToken = '8277276194:AAFrvVNDZsWEO_XhhRaFc0xpyhzUDiXP8cE';
         const chatId = '-5008939586';
 
-        // Ishxona joylashuvi (Toshloq TTB)
+        // Toshloq tumani tibbiyot birlashmasi joylashuvi
         const officeLocation = {
-            latitude: 40.545327,   // Ishxona latitude
-            longitude: 71.723603,  // Ishxona longitude  
-            radius: 200 // Metrlarda (200m = ishxona atrofi)
+            latitude: 40.485995,   // Ishxona markazi latitude
+            longitude: 71.757382,  // Ishxona markazi longitude  
+            radius: 150 // Metrlarda (150m = butun ishxona hududi)
         };
 
         // Ikki nuqta orasidagi masofani hisoblash (metrlarda)
